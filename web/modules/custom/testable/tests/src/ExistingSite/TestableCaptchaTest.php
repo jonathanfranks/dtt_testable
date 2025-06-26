@@ -1,11 +1,14 @@
 <?php
 
+use Drupal\Tests\testable\Traits\CaptchaTrait;
 use weitzman\DrupalTestTraits\ExistingSiteBase;
 
 /**
  * A test class for basic features of the site.
  */
 class TestableCaptchaTest extends ExistingSiteBase {
+
+  use CaptchaTrait;
 
   /**
    * Tests that the login form does not have a captcha.
@@ -15,6 +18,7 @@ class TestableCaptchaTest extends ExistingSiteBase {
   public function testLoginNoCaptcha() {
     $this->drupalGet('/user/login');
     $this->assertSession()->elementNotExists('css', 'fieldset.captcha');
+    $this->assertCaptchaNotExists();
   }
 
   /**
@@ -24,7 +28,7 @@ class TestableCaptchaTest extends ExistingSiteBase {
    */
   public function testResetPasswordHasCaptcha() {
     $this->drupalGet('/user/password');
-    $this->assertSession()->elementExists('css', 'fieldset.captcha');
+    $this->assertCaptchaExists();
   }
 
   /**
@@ -34,7 +38,7 @@ class TestableCaptchaTest extends ExistingSiteBase {
    */
   public function testRegisterHasCaptcha() {
     $this->drupalGet('/user/register');
-    $this->assertSession()->elementExists('css', 'fieldset.captcha');
+    $this->assertCaptchaExists();
   }
 
 }

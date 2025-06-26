@@ -1,0 +1,5 @@
+name: Testable
+type: module
+description: 'A module for testable features.'
+package: Testable
+core_version_requirement: ">=8"

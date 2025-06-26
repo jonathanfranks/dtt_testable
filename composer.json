@@ -22,7 +22,8 @@
         "drupal/core-recipe-unpack": "^11.2",
         "drupal/core-recommended": "^11.2",
         "drush/drush": "^13.6",
-        "mglaman/phpstan-drupal": "^2.0"
+        "mglaman/phpstan-drupal": "^2.0",
+        "weitzman/drupal-test-traits": "^2.5"
     },
     "conflict": {
         "drupal/drupal": "*"

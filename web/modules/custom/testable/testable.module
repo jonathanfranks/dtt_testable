@@ -8,13 +8,6 @@
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Implements hook_form_alter().
- */
-function testable_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-$x = 0;
-}
-
-/**
  * Implements hook_form_FORM_ID_alter().
  */
 function testable_form_node_article_form_alter(&$form, FormStateInterface $form_state, $form_id) {

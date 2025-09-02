@@ -37,6 +37,7 @@ permissions:
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'edit any article content'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'
